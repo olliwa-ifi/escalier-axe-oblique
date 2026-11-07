@@ -1,0 +1,35 @@
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- IDE / Editor files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# --- Ruby / Gem files ---
+# Si vous utilisez Bundler pour gérer des dépendances externes
+.bundle/
+vendor/bundle/
+Gemfile.lock
+
+# --- SketchUp specific ---
+# Exclure les fichiers de sauvegarde automatique ou logs de session
+*.log
+*.tmp
+
+# --- Build / Distribution ---
+# Si vous compressez le plugin pour la distribution
+*.zip
+*.rbz
+
+# Tests
+test_results/*.log
+.nextest/
+
+
