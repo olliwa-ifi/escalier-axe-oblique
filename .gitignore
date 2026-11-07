@@ -23,6 +23,11 @@ Gemfile.lock
 *.log
 *.tmp
 
+# --- Build / Distribution ---
+# Si vous compressez le plugin pour la distribution
+/release/
+*.zip
+*.rbz
 
 # Tests
 test_results/*.log
