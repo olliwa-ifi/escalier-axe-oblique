@@ -1,6 +1,6 @@
 # Générateur d'Escaliers à axe oblique pour SketchUp
 
-Un plugin basé sur Ruby pour SketchUp qui génère automatiquement des escaliers à axes obliques avec une trémie rectangulaire. Cet outil permet un prototypage rapide de designs d'escaliers, gérant aussi bien les configurations à petite qu'à grande diagonale avec précision.
+Plugin écrit en Ruby pour SketchUp qui génère automatiquement des escaliers à axes obliques avec une trémie rectangulaire. Cet outil permet un prototypage rapide de designs d'escaliers, gérant aussi bien les configurations à petite qu'à grande diagonale.
 
 ![Aperçu du plugin](assets/image.png)
 
@@ -10,15 +10,15 @@ Un plugin basé sur Ruby pour SketchUp qui génère automatiquement des escalier
 
 ## 🚀 Fonctionnalités
 
-- **Génération Dynamique :** Créez des escaliers instantanément en définissant les dimensions de la trémie.
+- **Génération Dynamique :** Création des escaliers en définissant les dimensions de la trémie.
 - **Deux Modes de Diagonale :** 
   - **Petite Diagonale :** L'axe du poteau est parallèle à l'axe des X.
   - **Grande Diagonale :** L'axe du poteau traverse la trémie.
 - **Poteau Personnalisable :** Choix entre un poteau cylindrique ou parallélipédique.
-- **Contrôle de l'Orientation :** Prise en charge du sens horaire (*clockwise*) et anti-horaire.
-- **Positionnement Précis :** Définissez les coordonnées X et Y exactes de l'assemblage dans votre modèle.
+- **Contrôle du sens de rotation :** Prise en charge du sens horaire (*clockwise*) et anti-horaire.
+- **Positionnement de l'escalier :** vecteur de translation de l'escalier par rapport aux axes du modèle.
 - **Gestion des Matières :** Personnalisation des finitions avec un choix de essences de bois (Clair ou Foncé) pour les marches et le poteau, avec une option de synchronisation automatique entre poteau et marches.
-- **Mode Démo :** Testez rapidement 4 scénarios prédéfinis pour valider les capacités de l'outil.
+- **Mode Démo :** Tester rapidement 4 scénarios prédéfinis pour valider les capacités de l'outil.
 
 ## 🧪 Le Mode Démo
 
