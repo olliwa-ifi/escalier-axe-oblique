@@ -3,7 +3,7 @@ module StairPluginSquare
     # Log d'initialisation au chargement du fichier
     StairObliqueLogger.log("Module Config initialisé", :debug)
     
-    VERSION = "1.0.3"
+    VERSION = "1.0.4"
 
     # --- DÉFINITION DES MATIÈRES (COULEURS) ---
     # On définit des constantes de couleurs RGB

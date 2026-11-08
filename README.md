@@ -4,7 +4,7 @@ Un plugin basé sur Ruby pour SketchUp qui génère automatiquement des escalier
 
 ![Aperçu du plugin](assets/image.png)
 
-![Version](https://img.shields.io/badge/version-1.0.2-blue)
+![Version](https://img.shields.io/badge/version-1.0.3-blue)
 ![Platform](https://img.shields.io/badge/platform-SketchUp-orange)
 ![Language](https://img.shields.io/badge/language-Ruby-red)
 
@@ -94,3 +94,6 @@ Les contributions sont les bienvenues ! Si vous trouvez un bug ou avez une idée
 Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails
 
 ![gif animated](assets/img000.gif)
+
+Calepinage avec OpenCutList [OCL](https://docs.opencutlist.org/)
+![OpenCutList](assets/calepinage.png)

@@ -71,10 +71,10 @@ module StairPluginSquare
 
         if p[:large_diagonal]
           StairObliqueLogger.info("Generating steps for large diagonal...")
-          StairPluginSquare::DiagLarge.generate_steps_large_diagonal(p, p_start, p_end, post_dir, post_length, assembly_entities, plugin_v, thickness)
+          StairPluginSquare::DiagLarge.generate_steps_large_diagonal(p, p_start, post_dir, post_length, assembly_entities, plugin_v)
         else
           StairObliqueLogger.info("Generating steps for small diagonal...")
-          StairPluginSquare::DiagSmall.generate_steps_small_diagonal(p, p_start, p_end, post_dir, post_length, assembly_entities, plugin_v, thickness)
+          StairPluginSquare::DiagSmall.generate_steps_small_diagonal(p, p_start, post_dir, post_length, assembly_entities, plugin_v)
         end
 
         # --- NOUVEAU : APPLICATION MATIÈRE AUX MARCHES ---

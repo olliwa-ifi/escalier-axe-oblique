@@ -4,10 +4,10 @@
 
 module StairPluginSquare
   module DiagSmall
-    def self.generate_steps_small_diagonal(p, p_start, p_end, post_dir, post_length, assembly_entities, plugin_v, thickness)
+    def self.generate_steps_small_diagonal(p, p_start, post_dir, post_length, assembly_entities, plugin_v)
       num_steps_int = p[:num_steps].to_i
       num_steps_f = p[:num_steps].to_f
-      
+      thickness = p[:step_thickness]
       total_rot = p[:total_rotation_angle].to_f
       base_angle = p[:clockwise] ? Math::PI : 0.0
       multiplier = p[:clockwise] ? -1 : 1
