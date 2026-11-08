@@ -43,32 +43,40 @@ Lorsqu'il est activé dans la boîte de dialogue (option "Mode Démo = 1"), le p
 Le plugin est fourni au format `.rbz`, le format standard pour les extensions SketchUp.
 
 ### Méthode Standard (Recommandée)
-1. **Téléchargez** le fichier `.rbz` depuis la section *Releases*.
-2. Ouvrez SketchUp.
-3. Allez dans le menu **Fenêtre** $\rightarrow$ **Gestionnaire d'extensions** (*Window* $\rightarrow$ *Extension Manager*).
-4. Cliquez sur le bouton **Installer l'extension...** en bas à gauche.
-5. Sélectionnez le fichier `.rbz` téléchargé et cliquez sur **Ouvrir**.
+1. **Télécharger** le fichier `.rbz` depuis la section *Releases*.
+2. Ouvrir SketchUp.
+3. Aller dans le menu **Fenêtre** $\rightarrow$ **Gestionnaire d'extensions** (*Window* $\rightarrow$ *Extension Manager*).
+4. Cliquer sur le bouton **Installer l'extension...** en bas à gauche.
+5. Sélectionner le fichier `.rbz` téléchargé et cliquez sur **Ouvrir**.
 6. Le plugin est maintenant installé et prêt à l'emploi !
 
 ## 📖 Mode d'Emploi
 
-1. Allez dans le menu **Extensions** (ou Plugins).
-2. Sélectionnez **"olliwa Escalier Axe Oblique vx.x.x"**.
-3. Une boîte de dialogue s'affiche. Remplissez les paramètres requis :
-   - **Trémie :** Définir la largeur, la longueur et la hauteur de l'ouverture.
-   - **Marches :** Régler le nombre de marches et leur épaisseur.
-   - **Clockwise :** Déterminer la direction dans laquelle l'escalier "monte" et tourne autour du poteau central.
-   - **Poteau :** Choisir la forme (circulaire ou rectangulaire) et les dimensions.
-   - **Rotation :** Définir l'angle de rotation total de l'escalier.
-   - **Matieres :**
-     - **Type de bois :** Choisissez entre "Bois Clair" et "Bois Foncé" pour l'ensemble de l'escalier.
-     - **Poteau identique :** Choisir si le poteau doit adopter la même couleur que les marches ou rester dans une finition distincte.
-4. Cliquez sur **OK** pour générer. Le plugin créera un groupe comprenant le poteau central et toutes les marches correctement orientées.
+1. Aller dans le menu **Extensions** (ou Plugins).
+2. Sélectionner **"olliwa Escalier Axe Oblique vx.x.x"**. Deux sous-menus sont proposés
+   - **Lancer l'outil vx.x.x**
+   - **Aide/Documentation**
+3. Une boîte de dialogue s'affiche. Remplir les paramètres requis :
+   - **Trémie :** la largeur, la longueur et la hauteur de l'ouverture.
+   - **Poteau :** 
+      - la forme (circulaire ou rectangulaire)
+      - les dimensions, 
+      - le type de diagonale
+      - la position du composant de l'escalier  
+   - **Marches :** 
+      - le nombre de marches,
+      - leur épaisseur,
+      - le sens de rotation de l'escalier clockwise ou anti-clockwise
+      - l'angle de rotation total de l'escalier.
+   - **Matieres :** 
+      - le type de bois entre "Bois Clair" et "Bois Foncé" pour l'ensemble de l'escalier.
+      - la même finition pour le poteau et les marches ou rester dans une finition distincte.
+4. Cliquer sur **OK** pour créer l'escalier. Le plugin créera un composant comprenant le composant du poteau central et les composants de toutes les marches.
 
 ### Précisions sur le paramètre Clockwise (Sens Horaire)
 Ce paramètre détermine la direction de rotation de l'escalier autour du poteau central :
-- **Activé (1) :** L'escalier tourne dans le sens des aiguilles d'une montre.
-- **Désactivé (0) :** L'escalier tourne dans le sens inverse des aiguilles d'une montre.
+- **Clockwise  :** L'escalier tourne dans le sens des aiguilles d'une montre.
+- **Anti-Clockwise :** L'escalier tourne dans le sens inverse des aiguilles d'une montre.
 
 Ce choix influence directement le point de départ et le point d'arrivée des marches par rapport aux dimensions de la trémie.
 
