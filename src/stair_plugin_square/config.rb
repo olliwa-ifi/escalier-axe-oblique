@@ -3,7 +3,17 @@ module StairPluginSquare
     # Log d'initialisation au chargement du fichier
     StairObliqueLogger.log("Module Config initialisé", :debug)
     
-    VERSION = "1.0.2"
+    VERSION = "1.0.3"
+
+    # --- DÉFINITION DES MATIÈRES (COULEURS) ---
+    # On définit des constantes de couleurs RGB
+    module Materials
+      # Bois Clair : Teinte beige/blonde (R: 225, G: 190, B: 150)
+      WOOD_LIGHT = Sketchup::Color.new(225, 190, 150)
+      
+      # Bois Foncé : Teinte brun profond/acajou (R: 90, G: 50, B: 30)
+      WOOD_DARK  = Sketchup::Color.new(90, 50, 30)
+    end
 
     @@params = {
       width_opening: 100.cm,
@@ -20,8 +30,11 @@ module StairPluginSquare
       clockwise: true,
       pos_x: 200.cm,
       pos_y: 200.cm,
-      demo_mode: true 
+      demo_mode: true,
 
+      # --- Paramètres de sélection des matières ---
+      material_type: "Bois Clair", 
+      post_material_same_as_steps: true 
     }
 
     def self.get(key); @@params[key]; end

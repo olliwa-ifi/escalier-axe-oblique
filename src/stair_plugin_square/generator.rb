@@ -77,6 +77,24 @@ module StairPluginSquare
           StairPluginSquare::DiagSmall.generate_steps_small_diagonal(p, p_start, p_end, post_dir, post_length, assembly_entities, plugin_v, thickness)
         end
 
+        # --- NOUVEAU : APPLICATION MATIÈRE AUX MARCHES ---
+        # On détermine la couleur des marches selon la config
+        step_color = (p[:material_type] == "Bois Clair") ? 
+                      StairPluginSquare::Config::Materials::WOOD_LIGHT : 
+                      StairPluginSquare::Config::Materials::WOOD_DARK
+
+        # On applique cette couleur à toutes les faces de l'assemblage, 
+        # SAUF celles qui appartiennent au poteau.
+        # Note : Puisque le poteau est un composant (instance), 
+        assembly_entities.grep(Sketchup::ComponentInstance).each do |instance|
+          # Skip the post instance to ensure the post keeps its own specific color
+          next if instance.definition.name.include?("Post_")
+          
+          # Apply material to all faces inside the step definition
+          instance.definition.entities.grep(Sketchup::Face).each do |face|
+            face.material = step_color
+          end
+        end
         # --- 5. POSITIONNEMENT FINAL ---
         # C'est ici et SEULEMENT ICI que l'on applique la position mondiale (pos_x, pos_y)
         final_position = Geom::Transformation.new([p[:pos_x], p[:pos_y], 0])
@@ -93,6 +111,21 @@ module StairPluginSquare
     end
   
     def self.create_post(p_start, p_end, p, target_entities)
+      # --- GESTION DES MATIÈRES ---
+      # 1. Déterminer la couleur du poteau
+      if p[:post_material_same_as_steps]
+        # Le poteau suit la couleur des marches
+        color_choice = p[:material_type]
+        post_color = (color_choice == "Bois Clair") ? 
+                      StairPluginSquare::Config::Materials::WOOD_LIGHT : 
+                      StairPluginSquare::Config::Materials::WOOD_DARK
+      else
+        # Le poteau est forcement en bois foncé (comme demandé)
+        post_color = StairPluginSquare::Config::Materials::WOOD_DARK
+      end
+
+      # On stocke les faces créées pour leur appliquer la couleur à la fin
+      created_faces = []
       if p[:post_is_circular]
         radius = p[:post_diameter] / 2.0
         pts_start = []; pts_end = []
@@ -125,6 +158,11 @@ module StairPluginSquare
           next_i = (i + 1) % 4
           target_entities.add_face(pts_start[i], pts_start[next_i], pts_end[next_i], pts_end[i])
         end
+      end
+      # --- 3. APPLICATION DE LA MATIÈRE ---
+      # On boucle sur toutes les faces de l'entité cible pour appliquer la couleur
+      target_entities.grep(Sketchup::Face).each do |face|
+        face.material = post_color
       end
     end
   end

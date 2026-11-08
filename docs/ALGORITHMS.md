@@ -4,7 +4,7 @@ Ce document détaille la logique mathématique et algorithmique utilisée pour l
 
 ## 1. Concepts Fondamentaux
 
-Le plugin génère un composant Sketchup qui contient un composant pour le poteau et autant de composants qu'il y a de marches. Les marches sont définiee par un polygone reliant des points clés ($C1$ à $C5$), garantissant la continuité structurelle entre les marches et les poteaux.
+Le plugin génère un composant SketchUp qui contient un composant pour le poteau et autant de composants qu'il y a de marches. Les marches sont définies par un polygone reliant des points clés ($C1$ à $C5$), garantissant la continuité structurelle entre les marches et les poteaux.
 
 ### Paramètres d'entrée
 - $W, L, H$ : Largeur, Longueur et Hauteur de l'ouverture.
@@ -29,7 +29,7 @@ $$Z_{C2} = z_{marche}$$
 ### B. Intersection avec le rectangle ($C3$)
 Le point $C3$ est le point de contact réel de la marche avec le bord de l'ouverture. Il est calculé comme l'intersection du segment $[C1, C2]$ avec les limites du rectangle $[0, W] \times [0, L]$.
 
-L'algorithme `intersect_with_box` utilise l'équation paramétrique du segment :
+L'algorithme `intersect-with-box` utilise l'équation paramétrique du segment :
 $$P(t) = C1 + t \cdot (C2 - C1), \quad t \in [0, 1]$$
 On recherche la plus petite valeur de $t > 0$ pour laquelle $P(t)$ touche une arête du rectangle.
 

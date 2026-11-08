@@ -12,11 +12,12 @@ Un plugin basé sur Ruby pour SketchUp qui génère automatiquement des escalier
 
 - **Génération Dynamique :** Créez des escaliers instantanément en définissant les dimensions de la trémie.
 - **Deux Modes de Diagonale :** 
-  - **Petite Diagonale :** l'axe du poteau est parallèle à l'axe des X.
-  - **Grande Diagonale :** l'axe du poteau traverse la trémie.
+  - **Petite Diagonale :** L'axe du poteau est parallèle à l'axe des X.
+  - **Grande Diagonale :** L'axe du poteau traverse la trémie.
 - **Poteau Personnalisable :** Choix entre un poteau cylindrique ou parallélipédique.
 - **Contrôle de l'Orientation :** Prise en charge du sens horaire (*clockwise*) et anti-horaire.
 - **Positionnement Précis :** Définissez les coordonnées X et Y exactes de l'assemblage dans votre modèle.
+- **Gestion des Matières :** Personnalisation des finitions avec un choix de essences de bois (Clair ou Foncé) pour les marches et le poteau, avec une option de synchronisation automatique entre poteau et marches.
 - **Mode Démo :** Testez rapidement 4 scénarios prédéfinis pour valider les capacités de l'outil.
 
 ## 🧪 Le Mode Démo
@@ -54,11 +55,14 @@ Le plugin est fourni au format `.rbz`, le format standard pour les extensions Sk
 1. Allez dans le menu **Extensions** (ou Plugins).
 2. Sélectionnez **"olliwa Escalier Axe Oblique vx.x.x"**.
 3. Une boîte de dialogue s'affiche. Remplissez les paramètres requis :
-   - **Trémie :** Définissez la largeur, la longueur et la hauteur de l'ouverture.
-   - **Marches :** Réglez le nombre de marches et leur épaisseur.
-   - **Clockwise :** Détermine la direction dans laquelle l'escalier "monte" et tourne autour du poteau central.
-   - **Poteau :** Choisissez la forme (circulaire ou rectangulaire) et les dimensions.
-   - **Rotation :** Définissez l'angle de rotation total de l'escalier.
+   - **Trémie :** Définir la largeur, la longueur et la hauteur de l'ouverture.
+   - **Marches :** Régler le nombre de marches et leur épaisseur.
+   - **Clockwise :** Déterminer la direction dans laquelle l'escalier "monte" et tourne autour du poteau central.
+   - **Poteau :** Choisir la forme (circulaire ou rectangulaire) et les dimensions.
+   - **Rotation :** Définir l'angle de rotation total de l'escalier.
+   - **Matieres :**
+     - **Type de bois :** Choisissez entre "Bois Clair" et "Bois Foncé" pour l'ensemble de l'escalier.
+     - **Poteau identique :** Choisir si le poteau doit adopter la même couleur que les marches ou rester dans une finition distincte.
 4. Cliquez sur **OK** pour générer. Le plugin créera un groupe comprenant le poteau central et toutes les marches correctement orientées.
 
 ### Précisions sur le paramètre Clockwise (Sens Horaire)
@@ -68,7 +72,7 @@ Ce paramètre détermine la direction de rotation de l'escalier autour du poteau
 
 Ce choix influence directement le point de départ et le point d'arrivée des marches par rapport aux dimensions de la trémie.
 
-![Guide utilisation](assets/image-2.png)
+![Guide utilisation](assets/interface.png)
 
 ## ⚙️ Détails Techniques
 
